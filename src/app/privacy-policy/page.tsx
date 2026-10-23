@@ -63,9 +63,8 @@ export default function PrivacyPolicy() {
             </p>
           </CalloutBox>
           <p>
-            The only time anything leaves your phone is described in Section 4
-            (prayer-time lookup and fonts on iPhone). Nothing in it identifies
-            you, and none of it reaches us.
+            Prayer Lock makes no network requests, so nothing leaves your
+            phone on iPhone or Android.
           </p>
         </Section>
 
@@ -79,36 +78,12 @@ export default function PrivacyPolicy() {
           </p>
         </Section>
 
-        <Section number="4" title="Network use">
-          <SubSection number="4.1" title="Android">
-            <p>
-              The Android app does not have the Internet permission. It cannot
-              send anything anywhere. Prayer times are calculated entirely on
-              your phone.
-            </p>
-          </SubSection>
-          <SubSection number="4.2" title="iPhone">
-            <p>
-              <strong>Prayer times.</strong> When the App calculates the
-              day&apos;s prayer times, it first asks the public prayer-times
-              service IslamicAPI (islamicapi.com) over an encrypted (HTTPS)
-              connection. That request contains only the{" "}
-              <strong>coordinates</strong> of your location (or of the city
-              you chose), the calculation method and the Asr school you
-              selected. It does not include your name, any account, any
-              device identifier or anything about the apps you use. Like any
-              internet request, it also reveals your IP address to that
-              service. We do not receive or store this request. If the service
-              cannot be reached, the App calculates the times on your phone
-              instead.
-            </p>
-            <p>
-              <strong>Fonts.</strong> The App may download its text fonts from
-              Google Fonts the first time they are needed. That request
-              contains no personal data beyond the IP address that every
-              internet request reveals.
-            </p>
-          </SubSection>
+        <Section number="4" title="No network requests">
+          <p>
+            Prayer Lock makes <strong>no network requests</strong> on iPhone
+            or Android. Prayer times are calculated entirely on your phone,
+            and the App&apos;s fonts are built in. Nothing leaves your device.
+          </p>
         </Section>
 
         <Section number="5" title="App blocking on Android (Usage access)">
@@ -217,7 +192,7 @@ export default function PrivacyPolicy() {
                 <SummaryRow question="Where is my data stored?" answer="On your phone only" />
                 <SummaryRow
                   question="Does anything leave my phone?"
-                  answer="Android: nothing. iPhone: location coordinates for the prayer-times lookup, and font downloads"
+                  answer="No. The App makes no network requests on iPhone or Android"
                 />
                 <SummaryRow question="Is the Accessibility service used?" answer="No" />
                 <SummaryRow question="How do I delete my data?" answer='"Reset all data" in Settings, or uninstall' />
@@ -258,9 +233,8 @@ export default function PrivacyPolicy() {
                 </p>
               </CalloutBox>
               <p>
-                الحالة الوحيدة التي يخرج فيها شيء من هاتفك موضّحة في القسم 4
-                (جلب أوقات الصلاة والخطوط على آيفون)، ولا شيء منها يحدد هويتك
-                ولا يصل إلينا.
+                لا يُجري التطبيق أي اتصال بالإنترنت، فلا يخرج أي شيء من هاتفك
+                على آيفون ولا على أندرويد.
               </p>
             </Section>
 
@@ -272,32 +246,12 @@ export default function PrivacyPolicy() {
               </p>
             </Section>
 
-            <Section number="4" title="استخدام الإنترنت">
-              <SubSection number="4.1" title="أندرويد">
-                <p>
-                  لا يملك تطبيق أندرويد إذن الوصول إلى الإنترنت، فلا يستطيع
-                  إرسال أي شيء إلى أي مكان. تُحسب أوقات الصلاة بالكامل على
-                  هاتفك.
-                </p>
-              </SubSection>
-              <SubSection number="4.2" title="آيفون">
-                <p>
-                  <strong>أوقات الصلاة:</strong> عند حساب أوقات اليوم يطلبها
-                  التطبيق أولاً من خدمة أوقات الصلاة العامة IslamicAPI
-                  (islamicapi.com) عبر اتصال مشفّر (HTTPS). يحتوي الطلب فقط على{" "}
-                  <strong>إحداثيات</strong> موقعك (أو المدينة التي اخترتها)
-                  وطريقة الحساب والمذهب المختار لصلاة العصر. لا يتضمن اسمك ولا
-                  أي حساب ولا معرّف الجهاز ولا أي شيء عن التطبيقات التي
-                  تستخدمها. وكأي طلب عبر الإنترنت يظهر عنوان IP الخاص بك لتلك
-                  الخدمة. لا يصلنا هذا الطلب ولا نحفظه. وإذا تعذّر الوصول إلى
-                  الخدمة يحسب التطبيق الأوقات على هاتفك.
-                </p>
-                <p>
-                  <strong>الخطوط:</strong> قد يُنزّل التطبيق خطوط النصوص من
-                  Google Fonts عند أول حاجة إليها. لا يحتوي هذا الطلب على أي
-                  بيانات شخصية سوى عنوان IP الذي يظهر في أي طلب عبر الإنترنت.
-                </p>
-              </SubSection>
+            <Section number="4" title="لا اتصال بالإنترنت">
+              <p>
+                لا يُجري قفل الصلاة <strong>أي اتصال بالإنترنت</strong> على
+                آيفون ولا على أندرويد. تُحسب أوقات الصلاة بالكامل على هاتفك،
+                وخطوط التطبيق مضمّنة فيه. لا يخرج أي شيء من جهازك.
+              </p>
             </Section>
 
             <Section number="5" title="حجب التطبيقات على أندرويد (الوصول إلى بيانات الاستخدام)">
@@ -326,9 +280,9 @@ export default function PrivacyPolicy() {
               </p>
             </Section>
 
-            <Section number="6" title="حجب التطبيقات على آيفون (مدة استخدام الجهاز)">
+            <Section number="6" title="حجب التطبيقات على آيفون («مدة استخدام الجهاز»)">
               <p>
-                على آيفون يستخدم الحجب ميزة <strong>مدة استخدام الجهاز</strong>{" "}
+                على آيفون يستخدم الحجب ميزة <strong>«مدة استخدام الجهاز»</strong>{" "}
                 من Apple (Family Controls). تُختار التطبيقات من أداة الاختيار
                 الخاصة بـ Apple وتبقى خاصة على جهازك: لا يستطيع التطبيق رؤية
                 التطبيقات التي اخترتها ولا طريقة استخدامك لهاتفك.
@@ -447,25 +401,6 @@ function Section({
         {children}
       </div>
     </section>
-  );
-}
-
-function SubSection({
-  number,
-  title,
-  children,
-}: {
-  number: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="mt-6">
-      <h3 className="text-lg font-semibold text-gray-800">
-        {number} {title}
-      </h3>
-      <div className="mt-2 space-y-3">{children}</div>
-    </div>
   );
 }
 
