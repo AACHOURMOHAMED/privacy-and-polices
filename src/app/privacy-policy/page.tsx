@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Prayer Lock (إلى صلاتي)",
+  title: "Privacy Policy | Prayer Lock (قفل الصلاة)",
   description:
-    "Privacy Policy for Prayer Lock (إلى صلاتي), a Muslim prayer reminder and app-locking application by Mohamed Aachour.",
+    "Privacy Policy for Prayer Lock (قفل الصلاة), a Muslim prayer reminder and app-blocking application by Mohamed Aachour.",
 };
+
+const EMAIL = "mohamedaachour511@gmail.com";
 
 export default function PrivacyPolicy() {
   return (
@@ -16,626 +18,190 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="mt-2 text-lg text-emerald-100">
-            Prayer Lock (إلى صلاتي)
+            Prayer Lock (قفل الصلاة)
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm text-emerald-200">
             <span>
-              <strong className="text-white">Last Updated:</strong> March 11,
+              <strong className="text-white">Last Updated:</strong> 23 October
               2026
             </span>
             <span>
-              <strong className="text-white">Effective Date:</strong> March 11,
-              2026
+              <strong className="text-white">Effective Date:</strong> 23
+              October 2026
             </span>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-4 text-sm">
+            <a href="#arabic" className="text-white underline hover:text-emerald-100">
+              العربية
+            </a>
+            <a href="/support" className="text-white underline hover:text-emerald-100">
+              Support
+            </a>
           </div>
         </div>
       </header>
 
-      {/* Content */}
+      {/* English */}
       <main className="mx-auto max-w-3xl px-6 py-10">
-        {/* 1. Introduction */}
         <Section number="1" title="Introduction">
           <p>
-            Welcome to <strong>Prayer Lock</strong> (إلى صلاتي). This Privacy
-            Policy explains how <strong>Mohamed Aachour</strong> (&quot;Developer&quot;,
-            &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) handles information in connection with the
-            Prayer Lock mobile application (&quot;App&quot;) available on Android (Google
-            Play) and iOS (App Store).
-          </p>
-          <p>
-            We designed Prayer Lock with privacy as a core principle. The App is
-            built to function entirely{" "}
-            <strong>on your device</strong>, with{" "}
-            <strong>
-              no data collection, no user accounts, no analytics, and no
-              communication with external servers
-            </strong>
-            . This policy describes the permissions we request, why we need them,
-            and how they are used — all strictly on your device.
-          </p>
-          <p>
-            By using Prayer Lock, you agree to the practices described in this
-            Privacy Policy.
+            This Privacy Policy explains how <strong>Mohamed Aachour</strong>{" "}
+            (&quot;we&quot;, &quot;us&quot;) handles information in the{" "}
+            <strong>Prayer Lock</strong> (قفل الصلاة) app for Android and
+            iPhone (&quot;the App&quot;). Prayer Lock reminds you of prayer
+            times and can block the apps you choose during prayer time.
           </p>
         </Section>
 
-        {/* 2. About the App */}
-        <Section number="2" title="About the App">
-          <p>
-            Prayer Lock is a Muslim prayer reminder application that:
-          </p>
-          <ul className="list-disc space-y-1 pl-6">
-            <li>
-              Calculates Islamic prayer times based on your geographic location.
-            </li>
-            <li>
-              Sends local notifications reminding you when it is time to pray.
-            </li>
-            <li>
-              Locks or blocks selected apps on your phone during prayer times to
-              encourage focus and reduce distractions.
-            </li>
-          </ul>
-          <p>
-            The App requires certain device permissions to deliver these
-            functions.{" "}
-            <strong>
-              All data processed by these permissions is handled exclusively on
-              your device and is never transmitted, shared, or stored on any
-              external server or service.
-            </strong>
-          </p>
-        </Section>
-
-        {/* 3. Data We Collect */}
-        <Section number="3" title="Data We Collect">
+        <Section number="2" title="Summary">
           <CalloutBox variant="green">
-            <strong>We do not collect, store, transmit, or share any personal data.</strong>{" "}
-            All information processed by the App stays entirely on your device
-            and is never sent anywhere.
+            <p>
+              Prayer Lock has <strong>no accounts, no ads and no analytics</strong>.
+              Your settings, chosen apps and prayer history are stored{" "}
+              <strong>on your phone only</strong>. We do not run any server, we
+              do not receive your data, and we never sell or share it.
+            </p>
           </CalloutBox>
-
-          <div className="mt-6 overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b-2 border-emerald-200 bg-emerald-50 text-left">
-                  <th className="px-4 py-3 font-semibold">Data Type</th>
-                  <th className="px-4 py-3 font-semibold">Purpose</th>
-                  <th className="px-4 py-3 font-semibold text-center">
-                    Transmitted?
-                  </th>
-                  <th className="px-4 py-3 font-semibold text-center">
-                    Stored?
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                <TableRow
-                  data="Precise Location (GPS)"
-                  purpose="Calculate prayer times for your location"
-                  transmitted="Never"
-                  stored="No"
-                />
-                <TableRow
-                  data="App Usage Statistics (Android)"
-                  purpose="Detect foreground app to trigger lock screen"
-                  transmitted="Never"
-                  stored="No"
-                />
-                <TableRow
-                  data="Accessibility Service Events (Android)"
-                  purpose="Instantly detect when a blocked app is opened"
-                  transmitted="Never"
-                  stored="No"
-                />
-                <TableRow
-                  data="Screen Time / FamilyControls Tokens (iOS)"
-                  purpose="Block selected apps via Apple's official framework"
-                  transmitted="Never"
-                  stored="On-device only (opaque tokens)"
-                />
-                <TableRow
-                  data="Prayer Preferences & App Selections"
-                  purpose="Store your settings between sessions"
-                  transmitted="Never"
-                  stored="On-device only"
-                />
-                <TableRow
-                  data="Lock History"
-                  purpose="Record of past prayer lock sessions"
-                  transmitted="Never"
-                  stored="On-device only"
-                />
-              </tbody>
-            </table>
-          </div>
+          <p>
+            The only time anything leaves your phone is described in Section 4
+            (prayer-time lookup and fonts on iPhone). Nothing in it identifies
+            you, and none of it reaches us.
+          </p>
         </Section>
 
-        {/* 4. Permissions and Their Use */}
-        <Section number="4" title="Permissions and Their Use">
-          {/* 4.1 Location */}
-          <SubSection number="4.1" title="Location Permission (Android & iOS)">
-            <PermissionBadge name="ACCESS_FINE_LOCATION (Android) / Location Services (iOS)" />
-            <p>
-              Prayer Lock requests access to your precise GPS location{" "}
-              <strong>solely</strong> to calculate accurate Islamic prayer times
-              (Fajr, Dhuhr, Asr, Maghrib, Isha) for your current geographic
-              position. Prayer time calculations are performed entirely on-device
-              using standard astronomical algorithms.
-            </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                Your location coordinates are{" "}
-                <strong>never sent to any server, API, or third party</strong>.
-              </li>
-              <li>
-                Location is not stored persistently; it is used in real time and
-                discarded.
-              </li>
-              <li>
-                You can revoke location permission at any time in your device
-                settings. The App will fall back to manual city selection if
-                location access is denied.
-              </li>
-            </ul>
-          </SubSection>
+        <Section number="3" title="Location">
+          <p>
+            Prayer Lock uses your phone&apos;s location{" "}
+            <strong>only while the app is open</strong> to work out prayer
+            times for where you are. It does not track your location in the
+            background and does not keep a location history. Instead of GPS,
+            you can choose a city manually.
+          </p>
+        </Section>
 
-          {/* 4.2 Usage Access */}
-          <SubSection
-            number="4.2"
-            title="Usage Access / App Usage Statistics (Android)"
-          >
-            <PermissionBadge name="PACKAGE_USAGE_STATS" />
+        <Section number="4" title="Network use">
+          <SubSection number="4.1" title="Android">
             <p>
-              This permission allows the App to detect which application is
-              currently running in the foreground of your device. It is used{" "}
-              <strong>exclusively</strong> to determine whether a blocked app is
-              active during prayer time so the App can display the lock/reminder
-              screen.
+              The Android app does not have the Internet permission. It cannot
+              send anything anywhere. Prayer times are calculated entirely on
+              your phone.
             </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                Usage data is{" "}
-                <strong>never stored, logged, or transmitted</strong>.
-              </li>
-              <li>
-                It is processed in real time, solely to trigger the lock screen
-                overlay.
-              </li>
-              <li>
-                This permission is not used to build profiles, monitor behavior,
-                or track app usage patterns.
-              </li>
-            </ul>
           </SubSection>
-
-          {/* 4.3 Notification */}
-          <SubSection
-            number="4.3"
-            title="Notification Permission (Android & iOS)"
-          >
-            <PermissionBadge name="POST_NOTIFICATIONS (Android) / Notification Permission (iOS)" />
+          <SubSection number="4.2" title="iPhone">
             <p>
-              Prayer Lock uses local notifications to alert you when prayer time
-              begins. These are <strong>local-only notifications</strong>{" "}
-              generated entirely on your device.
+              <strong>Prayer times.</strong> When the App calculates the
+              day&apos;s prayer times, it first asks the public prayer-times
+              service IslamicAPI (islamicapi.com) over an encrypted (HTTPS)
+              connection. That request contains only the{" "}
+              <strong>coordinates</strong> of your location (or of the city
+              you chose), the calculation method and the Asr school you
+              selected. It does not include your name, any account, any
+              device identifier or anything about the apps you use. Like any
+              internet request, it also reveals your IP address to that
+              service. We do not receive or store this request. If the service
+              cannot be reached, the App calculates the times on your phone
+              instead.
             </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                <strong>No push notification servers are used.</strong>
-              </li>
-              <li>
-                No notification tokens, device identifiers, or notification
-                content are ever sent to any external service.
-              </li>
-              <li>
-                You can manage notification preferences in your device settings
-                at any time.
-              </li>
-            </ul>
-          </SubSection>
-
-          {/* 4.4 Exact Alarm */}
-          <SubSection number="4.4" title="Exact Alarm Permission (Android)">
-            <PermissionBadge name="SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM" />
             <p>
-              This permission allows Prayer Lock to schedule precise alarms that
-              trigger at exact prayer times. Without this permission, prayer lock
-              activations may be delayed by the Android system.
-            </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                This permission is used only to fire timely prayer reminders and
-                lock activations.
-              </li>
-              <li>No data is collected through this permission.</li>
-            </ul>
-          </SubSection>
-
-          {/* 4.5 Battery */}
-          <SubSection
-            number="4.5"
-            title="Battery Optimization Exemption (Android)"
-          >
-            <p>
-              Prayer Lock requests exemption from battery optimization so that
-              the background lock service remains active and reliably triggers at
-              prayer times, even when the device has been idle.
-            </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>This does not grant any additional data access.</li>
-              <li>
-                It ensures the App&apos;s core functionality works consistently in
-                the background.
-              </li>
-            </ul>
-          </SubSection>
-
-          {/* 4.6 Screen Time */}
-          <SubSection
-            number="4.6"
-            title="Screen Time API / FamilyControls Framework (iOS)"
-          >
-            <PermissionBadge name="FamilyControls, ManagedSettings, DeviceActivity" />
-            <p>
-              On iOS, Prayer Lock uses Apple&apos;s official{" "}
-              <strong>Screen Time</strong> framework to block selected
-              applications during prayer times. When you select apps to block:
-            </p>
-            <ul className="list-disc space-y-1 pl-6">
-              <li>
-                The App stores <strong>opaque application tokens</strong>{" "}
-                provided by Apple&apos;s framework. These tokens are
-                cryptographically designed so that the specific app identities
-                are <strong>not accessible to the App itself</strong> — only to
-                the system.
-              </li>
-              <li>
-                Tokens are stored{" "}
-                <strong>exclusively on your device</strong>.
-              </li>
-              <li>
-                No app selection data, tokens, or usage information is
-                transmitted to any server or third party.
-              </li>
-              <li>
-                App blocking is enforced directly by Apple&apos;s system frameworks,
-                not by any third-party service.
-              </li>
-            </ul>
-            <p>
-              This usage complies with Apple&apos;s requirements for the
-              FamilyControls entitlement. The App does not use this framework to
-              monitor, report on, or restrict app usage for purposes outside of
-              prayer-time focus.
+              <strong>Fonts.</strong> The App may download its text fonts from
+              Google Fonts the first time they are needed. That request
+              contains no personal data beyond the IP address that every
+              internet request reveals.
             </p>
           </SubSection>
         </Section>
 
-        {/* 5. Accessibility Service Disclosure */}
-        <Section
-          number="5"
-          title="Accessibility Service Disclosure (Android)"
-        >
+        <Section number="5" title="App blocking on Android (Usage access)">
+          <PermissionBadge name="android.permission.PACKAGE_USAGE_STATS" />
+          <p>
+            To block the apps you chose during prayer time, Prayer Lock asks
+            you to turn on Android&apos;s <strong>Usage access</strong> for the
+            App. Before sending you to that setting, the App shows a screen
+            explaining why, and you can tap &quot;No thanks&quot;.
+          </p>
+          <p>
+            Prayer Lock uses Usage access <strong>only</strong> to read the
+            name of the app that is currently in front, so it can tell whether
+            it is one you chose to block. It does not read what is inside any
+            app, your messages, passwords or screen content. The app name is
+            checked on your phone and is not stored, collected or shared.
+          </p>
           <CalloutBox variant="amber">
-            <strong>Important Notice for Google Play Compliance</strong>
+            <p>
+              Prayer Lock does <strong>not</strong> use Android&apos;s
+              Accessibility service.
+            </p>
           </CalloutBox>
-
           <p>
-            Prayer Lock uses Android&apos;s{" "}
-            <strong>Accessibility Service</strong> (
-            <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm font-mono">
-              AccessibilityService
-            </code>
-            ).
+            You can turn Usage access off at any time in Android Settings. App
+            blocking then stops and the rest of the App keeps working.
           </p>
+        </Section>
 
-          <h4 className="mt-4 font-semibold text-gray-900">
-            Why we use it:
-          </h4>
+        <Section number="6" title="App blocking on iPhone (Screen Time)">
           <p>
-            The Accessibility Service is used solely to instantly detect when a
-            user opens a blocked application during prayer time, so the App can
-            immediately display the prayer reminder and lock screen. This enables
-            real-time, instantaneous app blocking without delay.
+            On iPhone, app blocking uses Apple&apos;s{" "}
+            <strong>Screen Time</strong> (Family Controls). The apps you pick
+            are chosen in Apple&apos;s own picker and stay private on your
+            device: Prayer Lock cannot see which apps you picked or how you
+            use your phone.
           </p>
+        </Section>
 
-          <h4 className="mt-4 font-semibold text-gray-900">
-            What we do NOT do with the Accessibility Service:
-          </h4>
-          <ul className="list-disc space-y-1 pl-6">
+        <Section number="7" title="Other permissions">
+          <ul className="list-disc space-y-2 pl-6">
             <li>
-              We do <strong>not</strong> read, collect, or record the content
-              displayed on your screen.
+              <strong>Notifications:</strong> prayer-time alerts and reminders.
             </li>
             <li>
-              We do <strong>not</strong> capture keystrokes, passwords, or any
-              text entered into any application.
+              <strong>Exact alarms (Android):</strong> to start the prayer lock
+              at the right minute.
             </li>
             <li>
-              We do <strong>not</strong> transmit any accessibility event data to
-              any server or third party.
+              <strong>Display over other apps (Android):</strong> to show the
+              prayer lock screen on top of blocked apps.
             </li>
             <li>
-              We do <strong>not</strong> interact with other app interfaces
-              beyond detecting which app has been launched.
+              <strong>Run at startup (Android):</strong> to resume an active
+              lock after a restart.
             </li>
             <li>
-              We do <strong>not</strong> use this service to access any personal,
-              financial, or sensitive information.
+              <strong>Battery optimization (Android, optional):</strong> so
+              Android does not stop the lock in the background.
             </li>
           </ul>
+          <p>None of these permissions send data anywhere.</p>
+        </Section>
 
-          <h4 className="mt-4 font-semibold text-gray-900">
-            What data is accessed:
-          </h4>
+        <Section number="8" title="Your choices and deleting your data">
           <p>
-            The Accessibility Service observes system-level window state change
-            events (i.e., which app has come to the foreground). This information
-            is used instantly and in memory only to determine whether to show the
-            prayer lock screen, and is{" "}
-            <strong>never stored or transmitted</strong>.
-          </p>
-          <p>
-            This is a <strong>core functionality requirement</strong> of the App.
-            Without the Accessibility Service, the App cannot reliably detect app
-            launches in real time and display the lock overlay immediately. No
-            alternative Android API provides the same real-time response for this
-            use case.
-          </p>
-          <p>
-            Users must explicitly grant Accessibility Service permission through
-            the Android system settings screen. You may revoke this permission at
-            any time, which will disable real-time app locking (the App&apos;s other
-            features will continue to work).
+            You can revoke any permission in your phone&apos;s settings.{" "}
+            <strong>&quot;Reset all data&quot;</strong> in the App&apos;s
+            Settings deletes everything Prayer Lock stored on your phone, and
+            uninstalling the App removes it too. Because we hold no data about
+            you, there is nothing for us to delete on our side.
           </p>
         </Section>
 
-        {/* 6. Data Storage */}
-        <Section number="6" title="Data Storage">
+        <Section number="9" title="Children">
           <p>
-            All application data is stored{" "}
-            <strong>locally on your device</strong> using the following
-            technologies:
-          </p>
-          <ul className="list-disc space-y-1 pl-6">
-            <li>
-              <strong>SharedPreferences:</strong> Stores lightweight settings
-              such as prayer method preferences, notification settings, and
-              toggle states.
-            </li>
-            <li>
-              <strong>Hive (local NoSQL database):</strong> Stores prayer
-              schedules, selected blocked apps, and lock history.
-            </li>
-          </ul>
-
-          <p className="mt-4 font-semibold">No data is ever:</p>
-          <ul className="list-disc space-y-1 pl-6">
-            <li>Uploaded to a cloud service</li>
-            <li>Sent to a remote database</li>
-            <li>Shared with any third party</li>
-            <li>
-              Backed up to any external server (App data may be included in your
-              device&apos;s standard OS backup, which is controlled by you through
-              your device and account settings)
-            </li>
-          </ul>
-        </Section>
-
-        {/* 7. Third-Party Services */}
-        <Section number="7" title="Third-Party Services">
-          <CalloutBox variant="green">
-            <strong>
-              Prayer Lock uses no third-party SDKs, services, or frameworks that
-              collect data.
-            </strong>
-          </CalloutBox>
-
-          <p className="mt-4">Specifically, the App contains:</p>
-          <ul className="list-none space-y-1 pl-4">
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No analytics</strong> (no Firebase Analytics, Mixpanel,
-              Amplitude, etc.)
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No crash reporting services</strong> (no Crashlytics,
-              Sentry, Bugsnag, etc.)
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No advertising networks</strong> (no AdMob, Meta Audience
-              Network, etc.)
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No tracking or attribution tools</strong> (no AppsFlyer,
-              Adjust, Branch, etc.)
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No Firebase services of any kind</strong>
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No remote configuration or A/B testing</strong>
-            </li>
-            <li>
-              <span className="mr-2 text-red-500">✕</span>
-              <strong>No social media SDKs</strong>
-            </li>
-          </ul>
-        </Section>
-
-        {/* 8. User Accounts */}
-        <Section number="8" title="User Accounts and Authentication">
-          <p>
-            Prayer Lock{" "}
-            <strong>does not require or support user accounts</strong>. There is
-            no registration, login, email address, or any form of user
-            identification. The App is entirely anonymous by design.
+            Prayer Lock is not directed at children under 13 and does not
+            knowingly collect data from them.
           </p>
         </Section>
 
-        {/* 9. Children's Privacy */}
-        <Section number="9" title="Children's Privacy">
+        <Section number="10" title="Changes to this policy">
           <p>
-            Prayer Lock is not directed at children under the age of 13, nor
-            does it knowingly collect personal information from children under
-            13. Because the App collects{" "}
-            <strong>no personal data at all</strong>, it poses no privacy risk to
-            users of any age group.
-          </p>
-          <p>
-            If you are a parent or guardian and have concerns about your
-            child&apos;s use of this App, please note that all data remains on the
-            device and no information is transmitted externally. You may
-            uninstall the App at any time to remove all associated data.
-          </p>
-          <p>
-            The App is suitable for users of all ages. Its Islamic prayer focus
-            makes it appropriate for family use.
+            If this policy changes, the new version will be published on this
+            page with a new date.
           </p>
         </Section>
 
-        {/* 10. Your Privacy Rights */}
-        <Section number="10" title="Your Privacy Rights">
-          <p>
-            Because Prayer Lock does not collect or transmit any personal data,
-            many formal rights (such as data access requests or data portability
-            requests) do not apply in the traditional sense. However, we
-            recognize the following rights and how they apply:
-          </p>
-
-          <SubSection number="10.1" title="Right to Access">
-            <p>
-              All data the App uses is stored locally on your device and is
-              accessible to you directly.
-            </p>
-          </SubSection>
-
-          <SubSection number="10.2" title="Right to Deletion">
-            <p>
-              To delete all data associated with Prayer Lock, simply{" "}
-              <strong>uninstall the App</strong> from your device. Uninstalling
-              removes all locally stored preferences, app selections, and lock
-              history. No data exists elsewhere to delete.
-            </p>
-          </SubSection>
-
-          <SubSection number="10.3" title="Right to Withdraw Consent">
-            <p>
-              You may revoke any permission (Location, Notifications,
-              Accessibility Service, Usage Access) at any time through your
-              device&apos;s system settings. Revoking permissions will limit
-              corresponding App functionality but will not affect data you have
-              not provided.
-            </p>
-          </SubSection>
-
-          <SubSection number="10.4" title="GDPR (European Users)">
-            <p>
-              If you are located in the European Economic Area (EEA), you benefit
-              from rights under the General Data Protection Regulation (GDPR).
-              The legal basis for processing location data to calculate prayer
-              times is <strong>legitimate interest / user consent</strong>, as
-              this is the core purpose of the App. Since no data leaves your
-              device, there are no data transfers to third countries to disclose.
-            </p>
-          </SubSection>
-
-          <SubSection number="10.5" title="CCPA (California Users)">
-            <p>
-              If you are a California resident, the California Consumer Privacy
-              Act (CCPA) grants you rights regarding personal information. Prayer
-              Lock{" "}
-              <strong>
-                does not sell, share, or monetize personal information in any
-                manner
-              </strong>
-              . Because no personal data is collected or stored off-device, there
-              is no personal information subject to CCPA disclosure, deletion, or
-              opt-out requests.
-            </p>
-          </SubSection>
+        <Section number="11" title="Contact">
+          <ContactBox />
         </Section>
 
-        {/* 11. Data Security */}
-        <Section number="11" title="Data Security">
-          <p>
-            Because all data remains on your device, the security of your data is
-            governed by your device&apos;s own security controls (screen lock,
-            encryption, OS security). We do not transmit data, so there is no
-            risk of a server-side data breach affecting Prayer Lock users.
-          </p>
-          <p>
-            We recommend keeping your device OS and the App up to date to benefit
-            from the latest security enhancements.
-          </p>
-        </Section>
-
-        {/* 12. Changes to This Policy */}
-        <Section number="12" title="Changes to This Privacy Policy">
-          <p>
-            We may update this Privacy Policy from time to time to reflect
-            changes in the App&apos;s features, applicable laws, or platform
-            requirements. When we make changes, we will:
-          </p>
-          <ul className="list-disc space-y-1 pl-6">
-            <li>
-              Update the <strong>&quot;Last Updated&quot;</strong> date at the top of this
-              document.
-            </li>
-            <li>
-              Publish the revised policy at the same URL where this policy is
-              hosted.
-            </li>
-            <li>
-              Where changes are material, provide a notice within the App or on
-              the App&apos;s store listing.
-            </li>
-          </ul>
-          <p>
-            Continued use of the App after any change constitutes your acceptance
-            of the updated policy. We encourage you to review this policy
-            periodically.
-          </p>
-        </Section>
-
-        {/* 13. Contact Us */}
-        <Section number="13" title="Contact Us">
-          <p>
-            If you have any questions, concerns, or requests regarding this
-            Privacy Policy or the App&apos;s privacy practices, please contact the
-            developer:
-          </p>
-          <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-5">
-            <p>
-              <strong>Developer:</strong> Mohamed Aachour
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a
-                href="mailto:mohamedaachour511@gmail.com"
-                className="text-emerald-700 underline hover:text-emerald-900"
-              >
-                mohamedaachour511@gmail.com
-              </a>
-            </p>
-            <p>
-              <strong>App:</strong> Prayer Lock (إلى صلاتي)
-            </p>
-          </div>
-          <p className="mt-4">
-            We will respond to privacy-related inquiries within a reasonable
-            timeframe.
-          </p>
-        </Section>
-
-        {/* 14. Summary */}
-        <Section number="14" title="Summary">
+        <Section number="12" title="At a glance">
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -646,46 +212,222 @@ export default function PrivacyPolicy() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <SummaryRow question="Do you collect personal data?" answer="No" />
-                <SummaryRow question="Do you send data to servers?" answer="No" />
-                <SummaryRow question="Do you use third-party analytics?" answer="No" />
-                <SummaryRow question="Do you show ads?" answer="No" />
                 <SummaryRow question="Do you require an account?" answer="No" />
+                <SummaryRow question="Do you show ads or use analytics?" answer="No" />
+                <SummaryRow question="Where is my data stored?" answer="On your phone only" />
                 <SummaryRow
-                  question="Where is my data stored?"
-                  answer="On your device only"
+                  question="Does anything leave my phone?"
+                  answer="Android: nothing. iPhone: location coordinates for the prayer-times lookup, and font downloads"
                 />
-                <SummaryRow
-                  question="How do I delete my data?"
-                  answer="Uninstall the App"
-                />
-                <SummaryRow
-                  question="Is the Accessibility Service used to spy on me?"
-                  answer="No — only to detect foreground app and show lock screen"
-                />
-                <SummaryRow
-                  question="Is Location used to track me?"
-                  answer="No — only for on-device prayer time calculation"
-                />
+                <SummaryRow question="Is the Accessibility service used?" answer="No" />
+                <SummaryRow question="How do I delete my data?" answer='"Reset all data" in Settings, or uninstall' />
               </tbody>
             </table>
           </div>
         </Section>
-
-        {/* Footer */}
-        <footer className="mt-12 border-t border-gray-200 pt-8 pb-12 text-center text-sm text-gray-500">
-          <p className="italic">
-            Prayer Lock (إلى صلاتي) — Built to help you focus on what matters.
-          </p>
-          <p className="mt-2">
-            &copy; 2026 Mohamed Aachour. All rights reserved.
-          </p>
-        </footer>
       </main>
+
+      {/* Arabic */}
+      <div id="arabic" dir="rtl" lang="ar" className="border-t-4 border-emerald-700 bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-10">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            سياسة الخصوصية
+          </h1>
+          <p className="mt-2 text-lg text-emerald-800">قفل الصلاة (Prayer Lock)</p>
+          <p className="mt-2 text-sm text-gray-500">
+            <strong>آخر تحديث:</strong> 23 أكتوبر 2026
+          </p>
+
+          <div className="mt-10">
+            <Section number="1" title="مقدمة">
+              <p>
+                توضّح هذه السياسة كيف يتعامل المطوّر <strong>Mohamed Aachour</strong> مع
+                المعلومات في تطبيق <strong>قفل الصلاة</strong> (Prayer Lock)
+                على أندرويد وآيفون. يذكّرك التطبيق بأوقات الصلاة ويمكنه حجب
+                التطبيقات التي تختارها أثناء وقت الصلاة.
+              </p>
+            </Section>
+
+            <Section number="2" title="ملخص">
+              <CalloutBox variant="green">
+                <p>
+                  لا يحتوي التطبيق على <strong>حسابات ولا إعلانات ولا أدوات تحليل</strong>.
+                  تُحفظ إعداداتك والتطبيقات التي اخترتها وسجل صلواتك{" "}
+                  <strong>على هاتفك فقط</strong>. لا نملك أي خادم، ولا تصلنا
+                  بياناتك، ولا نبيعها ولا نشاركها مع أحد.
+                </p>
+              </CalloutBox>
+              <p>
+                الحالة الوحيدة التي يخرج فيها شيء من هاتفك موضّحة في القسم 4
+                (جلب أوقات الصلاة والخطوط على آيفون)، ولا شيء منها يحدد هويتك
+                ولا يصل إلينا.
+              </p>
+            </Section>
+
+            <Section number="3" title="الموقع">
+              <p>
+                يستخدم التطبيق موقع هاتفك <strong>فقط أثناء فتح التطبيق</strong>{" "}
+                لحساب أوقات الصلاة في مكانك. لا يتتبع موقعك في الخلفية ولا
+                يحتفظ بسجل للمواقع. ويمكنك اختيار مدينة يدوياً بدلاً من GPS.
+              </p>
+            </Section>
+
+            <Section number="4" title="استخدام الإنترنت">
+              <SubSection number="4.1" title="أندرويد">
+                <p>
+                  لا يملك تطبيق أندرويد إذن الوصول إلى الإنترنت، فلا يستطيع
+                  إرسال أي شيء إلى أي مكان. تُحسب أوقات الصلاة بالكامل على
+                  هاتفك.
+                </p>
+              </SubSection>
+              <SubSection number="4.2" title="آيفون">
+                <p>
+                  <strong>أوقات الصلاة:</strong> عند حساب أوقات اليوم يطلبها
+                  التطبيق أولاً من خدمة أوقات الصلاة العامة IslamicAPI
+                  (islamicapi.com) عبر اتصال مشفّر (HTTPS). يحتوي الطلب فقط على{" "}
+                  <strong>إحداثيات</strong> موقعك (أو المدينة التي اخترتها)
+                  وطريقة الحساب والمذهب المختار لصلاة العصر. لا يتضمن اسمك ولا
+                  أي حساب ولا معرّف الجهاز ولا أي شيء عن التطبيقات التي
+                  تستخدمها. وكأي طلب عبر الإنترنت يظهر عنوان IP الخاص بك لتلك
+                  الخدمة. لا يصلنا هذا الطلب ولا نحفظه. وإذا تعذّر الوصول إلى
+                  الخدمة يحسب التطبيق الأوقات على هاتفك.
+                </p>
+                <p>
+                  <strong>الخطوط:</strong> قد يُنزّل التطبيق خطوط النصوص من
+                  Google Fonts عند أول حاجة إليها. لا يحتوي هذا الطلب على أي
+                  بيانات شخصية سوى عنوان IP الذي يظهر في أي طلب عبر الإنترنت.
+                </p>
+              </SubSection>
+            </Section>
+
+            <Section number="5" title="حجب التطبيقات على أندرويد (الوصول إلى بيانات الاستخدام)">
+              <p>
+                لحجب التطبيقات التي اخترتها أثناء وقت الصلاة، يطلب منك التطبيق
+                تفعيل <strong>«الوصول إلى بيانات الاستخدام»</strong> في
+                أندرويد. وقبل نقلك إلى هذا الإعداد تظهر شاشة توضّح السبب،
+                ويمكنك الضغط على «لا، شكراً».
+              </p>
+              <p>
+                يستخدمه التطبيق <strong>فقط</strong> لقراءة اسم التطبيق
+                المعروض أمامك حالياً لمعرفة هل هو من التطبيقات التي اخترت
+                حجبها. لا يقرأ محتوى أي تطبيق ولا رسائلك ولا كلمات المرور ولا
+                محتوى الشاشة. يُفحص اسم التطبيق على هاتفك ولا يُحفظ ولا يُجمع
+                ولا يُشارك.
+              </p>
+              <CalloutBox variant="amber">
+                <p>
+                  لا يستخدم التطبيق خدمة <strong>إمكانية الوصول</strong>{" "}
+                  (Accessibility) في أندرويد.
+                </p>
+              </CalloutBox>
+              <p>
+                يمكنك إيقاف هذا الإذن في أي وقت من إعدادات أندرويد، فيتوقف
+                الحجب وتستمر بقية ميزات التطبيق.
+              </p>
+            </Section>
+
+            <Section number="6" title="حجب التطبيقات على آيفون (مدة استخدام الجهاز)">
+              <p>
+                على آيفون يستخدم الحجب ميزة <strong>مدة استخدام الجهاز</strong>{" "}
+                من Apple (Family Controls). تُختار التطبيقات من أداة الاختيار
+                الخاصة بـ Apple وتبقى خاصة على جهازك: لا يستطيع التطبيق رؤية
+                التطبيقات التي اخترتها ولا طريقة استخدامك لهاتفك.
+              </p>
+            </Section>
+
+            <Section number="7" title="أذونات أخرى">
+              <ul className="list-disc space-y-2 pr-6">
+                <li>
+                  <strong>الإشعارات:</strong> تنبيهات وتذكيرات أوقات الصلاة.
+                </li>
+                <li>
+                  <strong>التنبيهات الدقيقة (أندرويد):</strong> لبدء قفل
+                  الصلاة في الدقيقة الصحيحة.
+                </li>
+                <li>
+                  <strong>العرض فوق التطبيقات الأخرى (أندرويد):</strong> لعرض
+                  شاشة قفل الصلاة فوق التطبيقات المحجوبة.
+                </li>
+                <li>
+                  <strong>التشغيل عند بدء الجهاز (أندرويد):</strong> لاستئناف
+                  القفل النشط بعد إعادة التشغيل.
+                </li>
+                <li>
+                  <strong>تحسين البطارية (أندرويد، اختياري):</strong> حتى لا
+                  يوقف أندرويد القفل في الخلفية.
+                </li>
+              </ul>
+              <p>لا يرسل أي من هذه الأذونات بيانات إلى أي مكان.</p>
+            </Section>
+
+            <Section number="8" title="خياراتك وحذف بياناتك">
+              <p>
+                يمكنك سحب أي إذن من إعدادات هاتفك. خيار{" "}
+                <strong>«مسح جميع البيانات»</strong> في إعدادات التطبيق يحذف
+                كل ما خزّنه التطبيق على هاتفك، وحذف التطبيق يزيلها أيضاً.
+                ولأننا لا نحتفظ بأي بيانات عنك فلا يوجد ما نحذفه من جهتنا.
+              </p>
+            </Section>
+
+            <Section number="9" title="الأطفال">
+              <p>
+                التطبيق غير موجّه للأطفال دون 13 عاماً ولا يجمع بياناتهم عن
+                علم.
+              </p>
+            </Section>
+
+            <Section number="10" title="التغييرات">
+              <p>
+                إذا تغيّرت هذه السياسة فسيُنشر الإصدار الجديد في هذه الصفحة مع
+                تاريخ جديد.
+              </p>
+            </Section>
+
+            <Section number="11" title="التواصل">
+              <ContactBox arabic />
+            </Section>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="mx-auto max-w-3xl border-t border-gray-200 px-6 pt-8 pb-12 text-center text-sm text-gray-500">
+        <p>
+          <a href="/support" className="text-emerald-700 underline hover:text-emerald-900">
+            Support / الدعم
+          </a>
+        </p>
+        <p className="mt-2">&copy; 2026 Mohamed Aachour. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
 
 /* ─── Reusable Components ─── */
+
+function ContactBox({ arabic = false }: { arabic?: boolean }) {
+  return (
+    <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+      <p>
+        <strong>{arabic ? "المطوّر:" : "Developer:"}</strong>{" "}
+        {arabic ? "Mohamed Aachour" : "Mohamed Aachour"}
+      </p>
+      <p>
+        <strong>{arabic ? "البريد الإلكتروني:" : "Email:"}</strong>{" "}
+        <a
+          href={`mailto:${EMAIL}`}
+          dir="ltr"
+          className="text-emerald-700 underline hover:text-emerald-900"
+        >
+          {EMAIL}
+        </a>
+      </p>
+      <p>
+        <strong>{arabic ? "التطبيق:" : "App:"}</strong> Prayer Lock (قفل الصلاة)
+      </p>
+    </div>
+  );
+}
 
 function Section({
   number,
@@ -753,29 +495,6 @@ function CalloutBox({
     <div className={`rounded-lg border-l-4 p-4 ${styles[variant]}`}>
       {children}
     </div>
-  );
-}
-
-function TableRow({
-  data,
-  purpose,
-  transmitted,
-  stored,
-}: {
-  data: string;
-  purpose: string;
-  transmitted: string;
-  stored: string;
-}) {
-  return (
-    <tr className="hover:bg-gray-50">
-      <td className="px-4 py-3 font-medium text-gray-900">{data}</td>
-      <td className="px-4 py-3">{purpose}</td>
-      <td className="px-4 py-3 text-center text-emerald-700 font-semibold">
-        {transmitted}
-      </td>
-      <td className="px-4 py-3 text-center">{stored}</td>
-    </tr>
   );
 }
 
